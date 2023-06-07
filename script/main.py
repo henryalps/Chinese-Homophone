@@ -5,8 +5,8 @@ import genanki
 
 pyp = PinYinParts.PinYinParts()
 
-common_char_dict = json.load(open('../data/char_common_detail.json'))
-chaizi_map = pickle.load(open('../data/data.pkl','rb'))
+common_char_dict = json.load(open('data/char_common_detail.json'))
+chaizi_map = pickle.load(open('data/data.pkl','rb'))
 pyp = PinYinParts.PinYinParts()
 
 # 'an' is exclude as 'an' and 'ang' are easy to distinct
