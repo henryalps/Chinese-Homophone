@@ -27,7 +27,7 @@ jobs:
       id: create_release
       uses: actions/create-release@v1.0.0
       env:
-        GITHUB_TOKEN: ${{ secrets.M_GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: v1.0.0
         release_name: Release 1.0.0
@@ -44,7 +44,7 @@ jobs:
     - name: Upload Asset File 1
       uses: actions/upload-release-asset@v1.0.2
       env:
-        GITHUB_TOKEN: ${{ secrets.M_GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./script/易混字训练集.apkg # Replace with the path to your asset file 1
@@ -52,7 +52,7 @@ jobs:
     - name: Upload Asset File 2
       uses: actions/upload-release-asset@v1.0.2
       env:
-        GITHUB_TOKEN: ${{ secrets.M_GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./script/易混字测试集.apkg # Replace with the path to your asset file 1
