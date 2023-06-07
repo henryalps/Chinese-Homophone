@@ -42,21 +42,18 @@ jobs:
       run: python3 script/main.py
       env:
         VERSION_CODE: ${{ github.sha }}
-    - name: Upload Asset File 1
+    - name: Upload Asset File
       uses: actions/upload-release-asset@v1.0.2
       env:
         GITHUB_TOKEN: ${{ secrets.M_GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./易混字训练集.apkg # Replace with the path to your asset file 1
-        asset_name: 易混字训练集.apkg # Replace with the name of your asset file 
-        asset_content_type: application/octet-stream
-    - name: Upload Asset File 2
-      uses: actions/upload-release-asset@v1.0.2
-      env:
-        GITHUB_TOKEN: ${{ secrets.M_GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./易混字测试集.apkg # Replace with the path to your asset file 1
-        asset_name: 易混字测试集.apkg # Replace with the name of your asset file 
-        asset_content_type: application/octet-stream
+        asset_path: |
+          ./易混字训练集.apkg # Replace with the path to your asset file
+          ./易混字测试集.apkg
+        asset_name: |
+          易混字训练集.apkg # Replace with the name of your asset file 
+          易混字测试集.apkg
+        asset_content_type: |
+          application/octet-stream
+          application/octet-stream

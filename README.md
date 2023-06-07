@@ -4,6 +4,7 @@
     <img src="pic/logo.png" alt="logo" width="10%" height="10%" align="center">
 </div>
 
+[![Release Workflow](https://github.com/henryalps/Chinese-Homophone/actions/workflows/release.yml/badge.svg)](https://github.com/henryalps/Chinese-Homophone/actions/workflows/release.yml)
 
 ## Background
 
