@@ -50,6 +50,7 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./script/易混字训练集.apkg # Replace with the path to your asset file 1
         asset_name: 易混字训练集.apkg # Replace with the name of your asset file 
+        application/octet-stream: application/octet-stream
     - name: Upload Asset File 2
       uses: actions/upload-release-asset@v1.0.2
       env:
@@ -58,3 +59,4 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./script/易混字测试集.apkg # Replace with the path to your asset file 1
         asset_name: 易混字测试集.apkg # Replace with the name of your asset file 
+        application/octet-stream: application/octet-stream
