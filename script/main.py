@@ -153,7 +153,7 @@ def main():
         for char_ in v:
             testset_dict[char_] = ''.join(pyp.extract_raw(char_)[0][0]) 
         
-    generate_anki_deck(trainset_dict, "易混字训练集", "易混字训练集.apkg")
-    generate_anki_deck(testset_dict, "易混字测试集", "易混字测试集.apkg")
+    generate_anki_deck(trainset_dict, "易混字训练集", "./data/trainset.apkg")
+    generate_anki_deck(testset_dict, "易混字测试集", "./data/testset.apkg")
 
 main()
