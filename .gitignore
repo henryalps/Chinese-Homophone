@@ -1,0 +1,3 @@
+**/*.apkg
+**/*.ipynb
+**/__pycache__
