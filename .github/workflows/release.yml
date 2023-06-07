@@ -42,18 +42,15 @@ jobs:
       run: python3 script/main.py
       env:
         VERSION_CODE: ${{ github.sha }}
-    - name: Upload Asset Files
-      uses: actions/upload-release-asset@v1.0.2
+        
+    - name: upload build to github
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
       env:
         GITHUB_TOKEN: ${{ secrets.M_GITHUB_TOKEN }}
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: |
-          易混字训练集.apkg
-          易混字测试集.apkg
-        asset_name: |
-          易混字训练集.apkg
-          易混字测试集.apkg
-        asset_content_type: |
-          application/octet-stream
-          application/octet-stream
+        files: |
+            易混字训练集.apkg
+            易混字测试集.apkg
+        draft: true
+        prerelease: true
