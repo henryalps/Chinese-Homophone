@@ -49,5 +49,5 @@ jobs:
         files: |
             data/trainset.apkg
             data/testset.apkg
-        draft: true
-        prerelease: true
+        draft: false
+        prerelease: false
